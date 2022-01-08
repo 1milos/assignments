@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddExamToAssignment extends Migration
+class AddDepartmentToExam extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddExamToAssignment extends Migration
      */
     public function up()
     {
-        Schema::table('assignments', function (Blueprint $table) {
-            $table->foreignId('exam_id')->constrained()->cascadeOnDelete();
+        Schema::table('exams', function (Blueprint $table) {
+            $table->foreignId('department_id')->constrained();
         });
     }
 
@@ -25,8 +25,8 @@ class AddExamToAssignment extends Migration
      */
     public function down()
     {
-        Schema::table('assignments', function (Blueprint $table) {
-            $table->removeColumn('exam_id');
+        Schema::table('exams', function (Blueprint $table) {
+            $table->removeColumn('department_id');
         });
     }
 }
