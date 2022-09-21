@@ -13,7 +13,7 @@ class AddExamToAssignment extends Migration
      */
     public function up()
     {
-        Schema::table('assignment', function (Blueprint $table) {
+        Schema::table('assignments', function (Blueprint $table) {
             $table->foreignId('exam_id')->constrained()->cascadeOnDelete();
         });
     }
@@ -25,7 +25,7 @@ class AddExamToAssignment extends Migration
      */
     public function down()
     {
-        Schema::table('assignment', function (Blueprint $table) {
+        Schema::table('assignments', function (Blueprint $table) {
             $table->removeColumn('exam_id');
         });
     }

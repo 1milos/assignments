@@ -21,6 +21,8 @@ class AddDepartmentToExam extends Migration
     /**
      * Reverse the migrations.
      *
+     * 
+     * 
      * @return void
      */
     public function down()
@@ -28,5 +30,5 @@ class AddDepartmentToExam extends Migration
         Schema::table('exams', function (Blueprint $table) {
             $table->removeColumn('department_id');
         });
-    }
+    }//
 }

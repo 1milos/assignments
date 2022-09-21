@@ -10,4 +10,10 @@ class Exam extends Model
     use HasFactory;
 
     protected $fillable = ["name", 'semester', 'espb'];
+    protected $with = ['department'];
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
 }
