@@ -14,11 +14,7 @@ class AssignmentFactory extends Factory
     public function definition()
     {
         return [
-            "name" => $this->faker->word,
-            'description' => $this->faker->realText(),
-            'required' => $this->faker->boolean(65),
-            'points' => $this->faker->numberBetween(5, 100),
-            'exam_id' => $this->faker->numberBetween(1, 9)
+            //
         ];
     }
 }
