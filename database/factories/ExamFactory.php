@@ -14,10 +14,7 @@ class ExamFactory extends Factory
     public function definition()
     {
         return [
-            "name" => $this->faker->word,
-            "semester" => $this->faker->numberBetween(1, 8),
-            "espb" => $this->faker->numberBetween(3, 7),
-            "department_id" => $this->faker->numberBetween(1, 4)
+            //
         ];
     }
 }

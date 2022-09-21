@@ -9,11 +9,5 @@ class Exam extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["name", 'semester', 'espb', 'department_id'];
-    protected $with = ['department'];
-
-    public function department()
-    {
-        return $this->belongsTo(Department::class);
-    }
+    protected $fillable = ["name", 'semester', 'espb'];
 }
